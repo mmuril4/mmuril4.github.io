@@ -19,17 +19,18 @@ var database = firebase.database();
 
 
 //Step 2
-var reservationData = {}
+var reservationData = {};
 
 
 
 //Step 3
 $('.reservation-day li').on('click', function () {
-	// alert($(this).text());
 	
 	var day = $(this).val();
 
 	reservationData.day = $(this).text();
+
+	//alert($(this).text());
 
 });
 
@@ -49,6 +50,8 @@ $('form').on('submit', function (e) {
 	//add input to reservationData object
 	reservationData.name = $(this).text();
 
+	//alert(name);
+
 
 //Step 5
 
@@ -60,6 +63,13 @@ $('form').on('submit', function (e) {
 		comment: day,
 		comment: name
 	});
+
+
+//Step 6
+function getReservations () {
+
+}
+
 });
 
 
