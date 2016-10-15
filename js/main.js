@@ -1,6 +1,6 @@
 // Initialize Firebase
 
-var firebaseURL = "https://www.gstatic.com/firebasejs/3.5.0/firebase.js";
+var firebaseURL = "https://www.gstatic.com/firebasejs/3.3.0/firebase.js";
 //Step 1
   var config = {
     apiKey: "AIzaSyAf82fQwO7oErwFf_jZYRP3dhQO0Q0VhU8",
