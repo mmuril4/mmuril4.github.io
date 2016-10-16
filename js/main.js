@@ -80,8 +80,6 @@ function getReservations () {
 		//remove all list reservations from DOM before appending list reservations
 		$('reservationsMade').empty();
 
-	});
-
 	//iterate through all reservations coming from db
 	for (var reservation in allReservations) {
 
@@ -97,7 +95,11 @@ function getReservations () {
 	$('.reservations').append(reservationListItem);
 	}
 
+	});
+
 }
+
+getReservations();
 
 //Step 7-9
 
