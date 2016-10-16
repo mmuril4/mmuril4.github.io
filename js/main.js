@@ -38,14 +38,14 @@ $('.reservation-day li').on('click', function () {
 
 //Step 4
 
-$('form').on('submit', function (e) {
+$('.reservations').on('submit', function (e) {
 	e.preventDefault();
 
 	//grab user's comment from input
 	//var name = $('.reservation-name').val();
 
 	//clear users input
-	//$('.reservation-name').val('');
+	$('.reservation-name').val('');
 
 	//add input to reservationData object
 	//reservationData.name = $('.reservation-name').text();
@@ -60,10 +60,11 @@ $('form').on('submit', function (e) {
 	var reservationDataReference = database.ref('reservationsMade');
 
 	//use set method to save data to the reservationsMade
+	reservationDataReference.push(reservationData);
+
 	//reservationDataReference.push({
 	//	comment: day,
 	//	comment: name
-	reservationDataReference.push(reservationDataReference);
 });
 
 
@@ -77,7 +78,7 @@ function getReservations () {
 		var allReservations = results.val();
 
 		//remove all list reservations from DOM before appending list reservations
-		$('reservations').empty();
+		$('reservationsMade').empty();
 
 	});
 
@@ -96,42 +97,9 @@ function getReservations () {
 	$('.reservations').append(reservationListItem);
 	}
 
-
 }
 
 //Step 7
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
