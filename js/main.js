@@ -30,7 +30,7 @@ $('.reservation-day li').on('click', function () {
 
 	reservationData.day = $(this).text();
 
-	//alert($(this).text());
+	alert($(this).text());
 
 });
 
