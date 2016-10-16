@@ -92,7 +92,7 @@ function getReservations () {
 	var source = $("#reservation-template").html();
 	var template = Handlebars.compile(source);
 	var reservationListItem = template(context);
-	$('.reservations').append(reservationListItem);
+	$('.reservation-list').append(reservationListItem);
 	}
 
 	});

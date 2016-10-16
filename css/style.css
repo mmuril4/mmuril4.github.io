@@ -30,10 +30,5 @@
 
 .restaurant-locator {
 	height: 50vh;
-	background-color: purple;
-}
-
-table {
-	background-color: blue;
-	height: 50vh;
+	margin-top: 200px;
 }
