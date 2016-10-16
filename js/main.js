@@ -99,17 +99,18 @@ function getReservations () {
 
 }
 
-//Step 7
+//Step 7-9
 
       function initMap() {
+      	var uluru = {lat: -25.363, lng: 131.044};
         var map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: 40.8054491, lng: -73.9654415};,
+          center: uluru,
           zoom: 10,
           scrollwheel: false
         });
 
         var marker = new google.maps.Marker({
-          position: {lat: 40.8054491, lng: -73.9654415};,
+          position: uluru,
           map: map,
           title: 'Monks Café'
         });
