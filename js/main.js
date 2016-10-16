@@ -45,7 +45,7 @@ $('.reservations').on('submit', function (e) {
 	//var name = $('.reservation-name').val();
 
 	//clear users input
-	$('.reservation-name').val('');
+	//$('.reservation-name').val('');
 
 	//add input to reservationData object
 	//reservationData.name = $('.reservation-name').text();
