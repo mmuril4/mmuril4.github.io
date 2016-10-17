@@ -62,9 +62,6 @@ $('.reservations').on('submit', function (e) {
 	//use set method to save data to the reservationsMade
 	reservationDataReference.push(reservationData);
 
-	//reservationDataReference.push({
-	//	comment: day,
-	//	comment: name
 });
 
 
@@ -87,11 +84,13 @@ function getReservations () {
 		var context = {
 			name: allReservations[reservation].name,
 			day: allReservations[reservation].day,
+			reservationId: reservation
 		};
 
 	var source = $("#reservation-template").html();
 	var template = Handlebars.compile(source);
 	var reservationListItem = template(context);
+	$('.reservation-list').empty(reservationListItem);
 	$('.reservation-list').append(reservationListItem);
 	}
 
@@ -99,7 +98,6 @@ function getReservations () {
 
 }
 
-getReservations();
 
 //Step 7-9
 
@@ -120,10 +118,31 @@ getReservations();
 
 
 
+//Bonuses
 
 
 
+// $('.reservations').on('submit', function (e) {
 
+//     e.preventDefault();
+
+//     var itemText = $('.reservation-name').find('input').val();
+
+//     var newListItem = '<input type="checkbox"><span class="item">' + itemText + '</span><a href="#" class="edit">Edit</a><a href="#" class="remove">Remove</a>';
+
+//     $(this).parent().html(newListItem);    
+// });
+
+
+$('#deleteItems').on('click', function () {
+
+    $('.reservation-list').empty();
+
+});
+
+
+
+getReservations();
 
 
 
