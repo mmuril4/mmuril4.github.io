@@ -13,7 +13,7 @@
 
 	<!-- template for reservation-list -->
 	<div>
-	<script id="reservation-template" type="text/x-handlebars-template" data-id="{{reservationID}}">
+	<script id="reservation-template" type="text/x-handlebars-template">
 		<tr>
 			<td>{{name}}</td>
 			<td>{{day}}</td>
@@ -69,12 +69,12 @@
 	<table class="table table-striped col-md-12 container-fluid">
 		<h4>Reservations</h4>
 		<thead>
-			<th id="thtest">Name</th>
+			<th>Name</th>
 			<th>Day</th>
-			<th>Cancel Reservation</th>
 		</thead>
-<button id="deleteButton">Cancel Reservation</button>
+
 		<tbody class="reservation-list">
+		<button id="deleteButton" data-id="{{reservationID}}">Cancel Reservation</button>
 		</tbody>
 	</table>
 </div>

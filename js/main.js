@@ -7,31 +7,26 @@ var config = {
 	storageBucket: "",
 	messagingSenderId: "498770179925"
 };
-
 firebase.initializeApp(config);
 //Connect to Database
 var database = firebase.database();
-
 //Step 2
 var reservationData = {};
-
 //Step 3
 $('.reservation-day li').on('click', function () {
 	reservationData.day = $(this).text();
 });
-
+//Step 4
 $('.reservations').on('submit', function (e) {
 	e.preventDefault();
 	//add input to reservationData object
 	reservationData.name = $('.reservation-name').val();
-
 //Step 5
 	//section for reservationData (U9L4S35)
 	var reservationDataReference = database.ref('reservationsMade');
 	//use set method to save data to the reservationsMade
 	reservationDataReference.push(reservationData);
 });
-
 //Step 6
 function getReservations () {
 	//use reference to database to listen for changes in reservation data
@@ -67,14 +62,12 @@ function initMap() {
 	var marker = new google.maps.Marker({
 		position: uluru,
 		map: map,
-		title: 'Monks Café'q
+		title: 'Monks Café'
 	});
 }
 
 //Bonuses
 $('#deleteButton').on('click', function () {
-	//$('.reservationtest[data-id="reservationId"]')
 	$('.reservation-list').empty();
 });
-
 getReservations();
